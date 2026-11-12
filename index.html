@@ -4,8 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>PixelPlayGames | Play Free Online Games</title>
+
   <meta name="description" content="Welcome to PixelPlayGames! Play fun free online browser games, starting with Cookie Catcher.">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LRDRRSBR96"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LRDRRSBR96');
+  </script>
 
   <style>
     * {
@@ -136,6 +147,22 @@
       max-width: 700px;
     }
 
+    .contact-email {
+      color: #a994ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact-email:hover {
+      color: #c4b5ff;
+      text-decoration: underline;
+    }
+
+    .contact-message {
+      color: #c6c4d8;
+      line-height: 1.8;
+    }
+
     footer {
       text-align: center;
       padding: 25px;
@@ -165,6 +192,7 @@
 
 <body>
 
+  <!-- HEADER -->
   <header>
     <div class="logo">🎮 PixelPlayGames</div>
 
@@ -176,31 +204,49 @@
     </nav>
   </header>
 
+  <!-- HOME -->
   <section class="hero" id="home">
     <h1>Welcome to <span>PixelPlayGames</span>!</h1>
-    <p>Discover fun games. Play anytime. Challenge yourself!</p>
+
+    <p>
+      Discover fun games. Play anytime. Challenge yourself!
+    </p>
+
     <a href="#games" class="button">Explore Games</a>
   </section>
 
+  <!-- GAMES -->
   <section class="section" id="games">
     <h2>🎯 Our Games</h2>
-    <p class="section-intro">Choose a game and start playing!</p>
+
+    <p class="section-intro">
+      Choose a game and start playing!
+    </p>
 
     <div class="game-card">
       <div class="game-image">🍪</div>
+
       <h3>Cookie Catcher</h3>
-      <p>Catch falling cookies, avoid bombs and beat your high score!</p>
+
+      <p>
+        Catch falling cookies, avoid bombs and beat your high score!
+      </p>
+
       <a
         href="https://pixelplaygames.github.io/Cookie-Catcher/"
         class="button"
         target="_blank"
         rel="noopener noreferrer"
-      >Play Now</a>
+      >
+        Play Now
+      </a>
     </div>
   </section>
 
+  <!-- ABOUT -->
   <section class="section about" id="about">
     <h2>About PixelPlayGames</h2>
+
     <p>
       PixelPlayGames is a gaming website where players can discover
       and enjoy fun browser games. We are creating exciting games
@@ -208,16 +254,35 @@
     </p>
   </section>
 
+  <!-- CONTACT -->
   <section class="section" id="contact">
-    <h2>Contact Us</h2>
+    <h2>📩 Contact Us</h2>
+
     <p class="section-intro">
-      Have a question or suggestion? Contact the PixelPlayGames team.
+      Have a question, suggestion or problem with one of our games?
+      We'd love to hear from you!
     </p>
-    <p>Email: Add your contact email here.</p>
+
+    <p class="contact-message">
+      For game support, feedback and general enquiries,
+      contact the PixelPlayGames team:
+    </p>
+
+    <p style="margin-top: 15px;">
+      Email:
+      <a
+        href="mailto:pixelplaygames.contact@gmail.com"
+        class="contact-email"
+      >
+        pixelplaygames.contact@gmail.com
+      </a>
+    </p>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <p>© 2026 PixelPlayGames. All rights reserved.</p>
+
     <p style="margin-top: 12px;">
       <a href="privacy.html">Privacy Policy</a>
     </p>
