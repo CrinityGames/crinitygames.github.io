@@ -81,16 +81,23 @@
 
     .button {
       display: inline-block;
-      background: #805cff;
+      background: linear-gradient(135deg, #805cff, #a16bff);
       color: white;
       padding: 14px 27px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+      transition: 0.25s ease;
     }
 
     .button:hover {
-      background: #6842e8;
+      background: linear-gradient(135deg, #6842e8, #805cff);
+      transform: translateY(-3px);
+    }
+
+    .button:focus-visible {
+      outline: 3px solid white;
+      outline-offset: 3px;
     }
 
     .section {
@@ -104,22 +111,37 @@
 
     .section-intro {
       color: #b9b8cb;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
+    }
+
+    .games-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      align-items: stretch;
     }
 
     .game-card {
       background: #1d1d32;
       border: 1px solid #34344d;
       border-radius: 13px;
-      padding: 25px;
+      padding: 20px;
+      width: 100%;
       max-width: 420px;
+      transition: 0.25s ease;
+    }
+
+    .game-card:hover {
+      transform: translateY(-6px);
+      border-color: #805cff;
+      box-shadow: 0 12px 30px rgba(128, 92, 255, 0.15);
     }
 
     .game-image {
       width: 100%;
       border-radius: 10px;
       overflow: hidden;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     .game-image img {
@@ -127,18 +149,69 @@
       width: 100%;
       height: auto;
       object-fit: cover;
-      border-radius: 10px;
+    }
+
+    .game-label {
+      display: inline-block;
+      background: #29204c;
+      color: #c4b5ff;
+      font-size: 11px;
+      font-weight: bold;
+      padding: 6px 10px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
     }
 
     .game-card h3 {
       margin-bottom: 10px;
-      font-size: 22px;
+      font-size: 23px;
     }
 
     .game-card p {
       color: #b9b8cb;
       line-height: 1.6;
       margin-bottom: 20px;
+    }
+
+    .play-button {
+      background: linear-gradient(135deg, #20b879, #12a866);
+      padding: 13px 25px;
+    }
+
+    .play-button:hover {
+      background: linear-gradient(135deg, #159b63, #0d8754);
+    }
+
+    .coming-card {
+      background: #19192c;
+      border: 2px dashed #484064;
+      border-radius: 13px;
+      padding: 30px 20px;
+      width: 100%;
+      max-width: 300px;
+      min-height: 230px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .coming-icon {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .coming-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .coming-card p {
+      color: #b9b8cb;
+      line-height: 1.6;
+      font-size: 14px;
     }
 
     .about {
@@ -190,6 +263,14 @@
         margin-left: 0;
         margin-right: 12px;
       }
+
+      .games-grid {
+        justify-content: center;
+      }
+
+      .coming-card {
+        max-width: 420px;
+      }
     }
   </style>
 </head>
@@ -227,29 +308,50 @@
       Choose a game and start playing!
     </p>
 
-    <div class="game-card">
+    <div class="games-grid">
 
-      <div class="game-image">
-        <img
-          src="cookie-catcher-cover.png"
-          alt="Cookie Catcher game cover - Catch, Collect, Score!"
+      <!-- COOKIE CATCHER -->
+      <div class="game-card">
+
+        <div class="game-image">
+          <img
+            src="cookie-catcher-cover.png"
+            alt="Cookie Catcher game cover - Catch, Collect, Score!"
+          >
+        </div>
+
+        <span class="game-label">FREE TO PLAY</span>
+
+        <h3>Cookie Catcher</h3>
+
+        <p>
+          Catch falling cookies, avoid bombs, collect coins
+          and beat your high score! How long can you survive?
+        </p>
+
+        <a
+          href="https://pixelplaygames.github.io/Cookie-Catcher/"
+          class="button play-button"
+          target="_blank"
+          rel="noopener noreferrer"
         >
+          ▶ PLAY NOW
+        </a>
+
       </div>
 
-      <h3>Cookie Catcher</h3>
+      <!-- FUTURE GAMES -->
+      <div class="coming-card">
+        <div class="coming-icon">🎮</div>
 
-      <p>
-        Catch falling cookies, avoid bombs and beat your high score!
-      </p>
+        <h3>More Games Coming Soon!</h3>
 
-      <a
-        href="https://pixelplaygames.github.io/Cookie-Catcher/"
-        class="button"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Play Now
-      </a>
+        <p>
+          Exciting new games are on the way.
+          Stay tuned for more fun!
+        </p>
+      </div>
+
     </div>
   </section>
 
